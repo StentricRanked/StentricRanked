@@ -8,7 +8,7 @@
 
 ## Overview
 
-Welcome to the Discord Ranking Bot! This bot allows you to easily manage and track the ranks of users in your Discord server. 
+A simple Discord ranking system. Star the repo for updates!
 
 ## Features
 
