@@ -1,3 +1,5 @@
+<img src="https://github.com/StentricRanked/Ranker/blob/main/src/img/logo.jpg?raw=true" alt="Discord Ranking Bot Logo" width="200">
+
 # Discord Ranking Bot 🚀
 
 ![Version](https://img.shields.io/badge/version-1.0.0-brightgreen)
