@@ -1,9 +1,9 @@
 {
-  "name": "Stentric Ranked",
+  "name": "StentricRanked",
   "description": "Simple ranking bot.",
   "version": "1.0.0",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -13,9 +13,11 @@
   "author": "Fighter, Ephraim Kreighbaum, Seni38",
   "license": "MIT",
   "dependencies": {
+    "@keyv/sqlite": "^3.6.6",
     "discord.js": "^14.11.0",
     "dotenv": "^16.3.1",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "keyv": "4.5.3"
   },
   "bugs": {
     "url": "https://github.com/StentricRanked/Ranker"

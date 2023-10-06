@@ -1,9 +1,10 @@
 const discordjs = require('discord.js');
 const dotenv = require('dotenv');
-const keyv = require('keyv');
+const Keyv = require('keyv');
 const prefix = process.env.PREFIX;
+const fs = require('fs');
 
-const { Client, GatewayIntentBits } = require('discord.js');
+const { Client, GatewayIntentBits, Collection } = require('discord.js');
 
 const client = new Client({
   intents: [
@@ -82,16 +83,38 @@ client.on('messageCreate', async (message) => {
   }
 });
 
-if (command.permissions) {
-  const userPermissions = message.member.permissions.toArray();
+async function handleCommand(message, command, args) {
+  if (command.permissions) {
+    const userPermissions = message.member.permissions.toArray();
 
-  for (const permission of command.permissions) {
-    if (!userPermissions.includes(permission)) {
-      await message.reply(`You need the ${permission} permission to use this command.`);
-      return;
+    for (const permission of command.permissions) {
+      if (!userPermissions.includes(permission)) {
+        await message.reply(`You need the ${permission} permission to use this command.`);
+        return;
+      }
     }
   }
-};
+
+  try {
+    await command.execute(message, args);
+  } catch (error) {
+    console.error(error);
+    await message.reply('There was an error while executing that command.');
+  }
+}
+
+client.on('messageCreate', async (message) => {
+  if (message.author.bot) return;
+
+  const args = message.content.slice(prefix.length).trim().split(/ +/);
+  const commandName = args.shift().toLowerCase();
+
+  const command = client.commands.get(commandName);
+
+  if (!command) return;
+
+  await handleCommand(message, command, args);
+});
 
 
 client.login(process.env.BOT_TOKEN);
