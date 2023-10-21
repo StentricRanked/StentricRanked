@@ -15,7 +15,7 @@ const maxQueueSize = 4; // Set the maximum number of players allowed in the queu
 const confirmationTimeout = 90000; // 90 seconds in milliseconds
 
 // Command prefix
-const prefix = '!';
+const prefix = process.env['PREFIX'];
 
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}`);
