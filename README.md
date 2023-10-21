@@ -20,12 +20,19 @@ This bot was built in discord.js v14.13.0
 ## Installation
 
 First, clone the repository: ```git clone https://github.com/StentricRanked/StentricRanked.git```
+
 CD into the folder: ```cd StentricRanked```
+
 Install dependencies: ```npm i```
+
 Rename .example to .env: ```cp .env.example .env```
+
 Nano into the file: ```nano .env```
+
 Input your prefix under "PREFIX", and your bot's token under "TOKEN".
+
 `CTRL + X and Y` to save and exit.
+
 Start the bot: ```npm run start```.
 
 That's it!
