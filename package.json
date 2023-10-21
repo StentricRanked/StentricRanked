@@ -13,13 +13,13 @@
   "author": "Fighter, Ephraim Kreighbaum, Seni38",
   "license": "MIT",
   "dependencies": {
-    "@keyv/sqlite": "^3.6.6",
-    "discord.js": "^14.11.0",
-    "dotenv": "^16.3.1",
-    "fs": "^0.0.1-security",
-    "keyv": "4.5.3"
+    "@types/node": "^18.0.6",
+    "discord.js": "^14.13.0",
+    "node-fetch": "^3.2.6",
+    "sqlite": "^5.0.1",
+    "sqlite3": "^5.1.6"
   },
   "bugs": {
-    "url": "https://github.com/StentricRanked/Ranker"
+    "url": "https://github.com/StentricRanked/StentricRanked"
   }
 }
