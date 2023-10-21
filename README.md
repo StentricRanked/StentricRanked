@@ -12,7 +12,7 @@ A simple Discord ranking system. Star the repo for updates!
 
 - **User Ranking**: Assign and track ranks for your server members.
 - **Leaderboards**: View leaderboards to see who's at the top.
-- **Automatically Assign Roles**: Bot automatically assigns up to 6 unique roles when a user ranks up!
+- **Automatically Assign Roles**: Bot automatically assigns unique roles when a user ranks up!
 - **Easy to Use**: Simple commands for viewing leaderboard or managing levels!
 
 This bot was built in discord.js v14.13.0
